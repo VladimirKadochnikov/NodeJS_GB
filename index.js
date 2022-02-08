@@ -42,10 +42,10 @@ const isPrime = (x, n) => {
       for (let j = 2; j <= Math.sqrt(i); j++) {
           if (i % j == 0) continue nextPrime; 
       }
-    primes.push(i);      
+    if (i > 1) primes.push(i);      
     }
   } else {
-    console.log('Граница диапазона не является числом'.red)
+    console.log('Некорректный диапазон чисел'.red)
     return
   }
   showPrime(primes);  
